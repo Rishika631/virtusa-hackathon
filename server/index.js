@@ -16,9 +16,11 @@ app.use(express.json());
 app.use(cors());
 
 mongoose.connect(
-    "DB"
+  "mongodb+srv://rishika:Rishika06@cluster0.lmfgunj.mongodb.net/?retryWrites=true&w=majority").then(() => {
+    console.log(`Connection made`);
+  });
     
-  );
+  
 
 
   app.get("/getemp", (req, res) => {
