@@ -108,20 +108,7 @@ function App() {
               </label>
             </div>
 
-            <div className="empDisplay">
-        {listOfemp.map((emp) => {
-          return (
-            <div>
-              <h1>Name: {emp.name}</h1>
-              <h1>From date: {emp.fromdate}</h1>
-              <h1>To Date: {emp.todate}</h1>
-              
-              
-            </div>
-          );
-        }
-        )}
-      </div> 
+           
                
       <div align="center">  <button className="sb-btn" type="button" onClick={createemp}>SUBMIT</button> </div>         
           </div>         
