@@ -145,22 +145,6 @@ function App() {
         />
               </label>
             </div>
-
-            <div className="usersDisplay">
-        {listOfemp.map((job) => {
-          return (
-            <div>
-              <h1>Name: {job.name}</h1>
-              <h1>Email: {job.email}</h1>
-              <h1>Location: {job.location}</h1>
-              <h1>Duration: {job.duration}</h1>
-              <h1>Date: {job.date}</h1>
-              <h1>Tech: {job.tech}</h1>
-              
-            </div>
-          );
-        })}
-      </div>
             
                
       <div align="center">  <button className="sb-btn" type="button" onClick={createemp}>SUBMIT</button> </div>         
