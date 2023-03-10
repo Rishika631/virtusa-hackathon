@@ -1,0 +1,33 @@
+body{
+    background: url('img/bg.jpg');
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .container{
+    text-align: center;
+  }
+.container-2{
+    border: 3px solid black ;
+    border-radius: 2%;
+    margin-top: 150px;
+    position: relative;
+    left: 35%;
+}
+.login-page-container{
+    margin-top: 200px;
+}
+@media (max-width:990px){
+    .container-2{
+        width: 60%;
+        position: static;
+        text-align: center;
+        margin: 80px auto ;
+    }
+} 
+.form-heading{
+    padding: 20px 0;
+}
+p{
+    color: #8f8f8f
+}
