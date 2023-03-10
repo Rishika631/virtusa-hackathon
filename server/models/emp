@@ -1,0 +1,33 @@
+const mongoose = require("mongoose");
+
+const jobSchema = new mongoose.Schema({
+  name: {
+    type: String,
+    required: true,
+  },
+  email: {
+    type: String,
+    required: true,
+  },
+  location: {
+    type: String,
+    required: true,
+  },
+  duration: {
+    type: String,
+    required: true,
+  },
+  date: {
+    type: Date,
+    required: true,
+  },
+  tech: {
+    type: String,
+    required: true,
+  },
+});
+
+const jobModel = mongoose.model("job", jobSchema);
+module.exports = jobModel;
+
+
