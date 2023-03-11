@@ -16,13 +16,13 @@ function App() {
   
 
   useEffect(() => {
-    Axios.get("http://localhost:8004/getemp").then((response) => {
+    Axios.get("http://localhost:8080/getemp").then((response) => {
       setListOfemp(response.data);
     });
   }, []);
 
   const createemp = () => {
-    Axios.post("http://localhost:8004/createemp", {
+    Axios.post("http://localhost:8080/createemp", {
       name,
         email,
         location,
