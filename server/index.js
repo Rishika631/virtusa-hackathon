@@ -1,4 +1,3 @@
-
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
@@ -9,12 +8,13 @@ const cors = require("cors");
 app.use(express.json());
 app.use(cors());
 
-mongoose.connect(
-  "DB").then(() => {
+mongoose
+  .connect(
+    "mongodb+srv://rishika:Rishika06@cluster0.lmfgunj.mongodb.net/?retryWrites=true&w=majority"
+  )
+  .then(() => {
     console.log(`connection sucessful`);
-  })
-;
-
+  });
 
 app.get("/search", (req, res) => {
   const emp = req.body;
@@ -39,7 +39,6 @@ app.get("/search", (req, res) => {
 app.listen(4001, () => {
   console.log("SERVER RUNS PERFECTLY!");
 });
-
 
 /* <div className="usersDisplay">
       {listOfUsers
