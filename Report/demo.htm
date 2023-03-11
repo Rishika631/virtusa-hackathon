@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Upload</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+    />
+    <style>
+        .contain{
+            margin: 120px auto;
+            padding: 10px;
+            text-align: center;
+            border-radius: 2%;
+            border: 2px blueviolet solid;
+        }
+        h3{
+            padding-bottom: 10px;
+        }
+        .buttn{
+            text-align: center;
+            background-image: linear-gradient(125deg, #d665ad, #5891db);
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <div class=" container">
+
+        <div class="row">
+            <div class="col-lg-4 contain bg-white">
+                <h3 class="form-heading">Report Submission</h3>
+    
+                <form action="demo.php" method="post" enctype="multipart/form-data">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Enter Name">
+                    </div>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Enter your Mentor's name">
+                    </div>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Enter your Tech domain">
+                    </div>
+                    <div class="input-group mb-3 btn">
+    
+                        <p>Select a File to upload</p>
+                        <input class="buttn" type="file" name="fileupload" id="fileUpload">
+                    </div>
+                    <div class="input-group mb-3 btn">
+                        <input class="buttn" type="submit" value="Upload File">
+    
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
