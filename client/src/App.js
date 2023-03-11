@@ -7,7 +7,7 @@ import Axios from "axios";
 function App() {
   const [listOfemp, setListOfemp] = useState([]);
   const [name, setName] = useState("");
-    const [fromdate, setFromDate] = useState(new Date());
+  const [fromdate, setFromDate] = useState(new Date());
   const [todate, settodate] = useState(new Date());
 
   useEffect(() => {
@@ -21,98 +21,90 @@ function App() {
       name,
       fromdate,
       todate,
-     
     }).then((response) => {
       setListOfemp([
         ...listOfemp,
         {
-            name,
-            fromdate,
-            todate,
-            
+          name,
+          fromdate,
+          todate,
         },
       ]);
     });
   };
 
   return (
-    <div className="App">
-          <div className="title">Job Shadowing Availability</div>
-          
-          <div align="center"><div className="App"></div></div>
-
-            <div>
-              <label>
-              <div align="center">Name:</div>
-                <input
-          type="text"
-          
-          onChange={(event) => {
-            setName(event.target.value);
-          }}
-        />
-              </label>
-            </div>
-
-            <div>
-              <label>
-
-            <div align="center"> :</div>
-
-            <div className="App">
-        <input
-          // className={`form__input  ${!fromDate && "form__input--incomplete"}`}
-          id="fromDate"
-          name="fromDate"
-          type="date"
-          autoComplete="off"
-          value={
-            fromdate.getFullYear().toString() +
-            "-" +
-            (fromdate.getMonth() + 1).toString().padStart(2, 0) +
-            "-" +
-            fromdate.getDate().toString().padStart(2, 0)
-          }
-          onChange={(e) => {
-            setFromDate(new Date(e.target.value));
-          }}
-        />
+    <div style={{ textAlign: "center" }}>
+      <h1 style={{ fontSize: "36px", fontWeight: "bold", marginBottom: "30px" }}>Job Shadowing Availability</h1>
+      
+      <div style={{ marginBottom: "20px" }}>
+        <label style={{ display: "block", fontSize: "24px", fontWeight: "bold", marginBottom: "10px" }}>
+          Name:
+          <input
+            type="text"
+            onChange={(event) => {
+              setName(event.target.value);
+            }}
+            style={{ display: "block", fontSize: "18px", padding: "10px", borderRadius: "5px", border: "2px solid #ddd" }}
+          />
+        </label>
       </div>
-      </label>
-            </div>
-
-
-            <div>
-              <label>
-              <div align="center"> :</div>
-               
-              <div className="App">
-      <input
-        // className={`form__input  ${!fromDate && "form__input--incomplete"}`}
-        id="todate"
-        name="todate"
-        type="date"
-        autoComplete="off"
-        value={
-          todate.getFullYear().toString() +
-          "-" +
-          (todate.getMonth() + 1).toString().padStart(2, 0) +
-          "-" +
-          todate.getDate().toString().padStart(2, 0)
-        }
-        onChange={(e) => {
-          settodate(new Date(e.target.value));
-        }}
-      />
+  
+      <div style={{ marginBottom: "20px" }}>
+        <label style={{ display: "block", fontSize: "24px", fontWeight: "bold", marginBottom: "10px" }}>
+          From Date:
+          <input
+            id="fromDate"
+            name="fromDate"
+            type="date"
+            autoComplete="off"
+            value={
+              fromdate.getFullYear().toString() +
+              "-" +
+              (fromdate.getMonth() + 1).toString().padStart(2, 0) +
+              "-" +
+              fromdate.getDate().toString().padStart(2, 0)
+            }
+            onChange={(e) => {
+              setFromDate(new Date(e.target.value));
+            }}
+            style={{ display: "block", fontSize: "18px", padding: "10px", borderRadius: "5px", border: "2px solid #ddd" }}
+          />
+        </label>
+      </div>
+  
+      <div style={{ marginBottom: "20px" }}>
+        <label style={{ display: "block", fontSize: "24px", fontWeight: "bold", marginBottom: "10px" }}>
+          To Date:
+          <input
+            id="toDate"
+            name="toDate"
+            type="date"
+            autoComplete="off"
+            value={
+              todate.getFullYear().toString() +
+              "-" +
+              (todate.getMonth() + 1).toString().padStart(2, 0) +
+              "-" +
+              todate.getDate().toString().padStart(2, 0)
+            }
+            onChange={(e) => {
+              settodate(new Date(e.target.value));
+            }}
+            style={{ display: "block", fontSize: "18px", padding: "10px", borderRadius: "5px", border: "2px solid #ddd" }}
+          />
+        </label>
+      </div>
+  
+      <button
+        type="button"
+        onClick={createemp}
+        style={{ fontSize: "24px", fontWeight: "bold", padding: "10px 20px", borderRadius: "5px", border: "none", backgroundColor: "#4CAF50", color: "#fff" }}
+      >
+        SUBMIT
+      </button>
     </div>
-              </label>
-            </div>
-
-           
-               
-      <div align="center">  <button className="sb-btn" type="button" onClick={createemp}>SUBMIT</button> </div>         
-          </div>         
-        );
-       //run client npm start and server node index.js
-  } 
+  );
+          }
+  
 export default App;
