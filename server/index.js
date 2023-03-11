@@ -24,7 +24,7 @@ mongoose.connect(
 
 
   app.get("/getemp", (req, res) => {
-    EmpModel.find({}, (err, result) => {
+    EmpModel.find({}).then((err, result) => {
       if (err) {
         res.json(err);
       } else {
@@ -47,6 +47,17 @@ app.post("/createemp", async (req, res) => {
   const newemp = new EmpModel(emp);
   const user=await newemp.save();
   res.json(user);
+});
+
+app.delete("/deleteemp", async (req, res) => {
+  const emp = req.body;
+  const deleteemp = new EmpModel(emp);
+  EmpModel.findOneAndRemove(emp).then((result) => {
+    console.log("delete done"+JSON.stringify(result))
+  }).catch((err) => {
+    console.log("error");
+  })
+  res.json("deleted successfully!!!");
 });
 
 app.listen(8004, () => {
