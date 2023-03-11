@@ -99,7 +99,7 @@ function App() {
       <button
         type="button"
         onClick={createemp}
-        style={{ fontSize: "24px", fontWeight: "bold", padding: "10px 20px", borderRadius: "5px", border: "none", backgroundColor: "#4CAF50", color: "#fff" }}
+        style={{ fontSize: "24px", fontWeight: "bold", padding: "10px 20px", borderRadius: "5px", border: "none", backgroundColor: "purple", color: "#fff" }}
       >
         SUBMIT
       </button>
