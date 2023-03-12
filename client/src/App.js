@@ -30,6 +30,7 @@ function App() {
           todate,
         },
       ]);
+      alert("Submitted sucessfully!");
     });
   };
 
