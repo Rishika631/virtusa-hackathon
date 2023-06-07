@@ -11,3 +11,5 @@ Features:
 5.Report submission
 
 Detailed description in the powerpoint presentation.
+
+Link for the certificate:https://drive.google.com/file/d/17m9_ilZz1TgDSKEQKnocLt1Qip-UXdXl/view?usp=sharing
